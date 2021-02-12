@@ -102,6 +102,8 @@ func main() {
 	}
 }
 
+// readCsvFile takes in the path of a csv file, opens and reads the contents of the file.
+// Returns a map matching the structure of what will be written to the JSON file.
 func readCsvFile(filePath string) ([]map[string]string, error) {
 	ret := []map[string]string{}
 
