@@ -81,7 +81,7 @@ func main() {
 			fmt.Println("Failed to create new file")
 		}
 
-		jsonObj, err := readCsvFile(file)
+		jsonObj, err := ReadCsvFile(file)
 		if err != nil {
 			return errors.New("Failed to parse csv file")
 		}
@@ -102,9 +102,9 @@ func main() {
 	}
 }
 
-// readCsvFile takes in the path of a csv file, opens and reads the contents of the file.
+// ReadCsvFile takes in the path of a csv file, opens and reads the contents of the file.
 // Returns a map matching the structure of what will be written to the JSON file.
-func readCsvFile(filePath string) ([]map[string]string, error) {
+func ReadCsvFile(filePath string) ([]map[string]string, error) {
 	ret := []map[string]string{}
 
 	// Open the csv file to parse
